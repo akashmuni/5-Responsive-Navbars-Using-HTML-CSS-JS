@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Merriweather', serif;
+}
+nav{
+    background: rgb(255, 217, 5);
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+    border: 1px solid #eee;
+    transition: .5s;
+    color: rgb(90, 65, 1);
+
+}
+nav #icon{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1048px){
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 909px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(255, 187, 0);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover,li a:active{
+        background: none;
+        color: rgb(90, 65, 1);
+    }
+    nav ul.show{
+        left: 0;
+    }
+}
+
+section{
+    background: url(https://source.unsplash.com/1000x700/?nature,yellow) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}

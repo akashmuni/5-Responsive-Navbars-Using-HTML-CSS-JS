@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    background-color: rgb(255, 208, 251);
+
+}
+
+.toggle{
+    font-size: 30px;
+    color: #eee;
+    float: left;
+    line-height: 45px;
+    margin-left: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    background-color: #000;
+    height: 45px;
+    width: 100%;
+}
+
+ul{
+    float: left;
+    margin-left: 5%;
+}
+
+.socialtop{
+    float: right;
+    margin-right: 5%;
+}
+
+ul li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+ul li a{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #eee;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+ul li:first-child{
+    background-color: #ff00c8;
+}
+ul li:hover{
+    background-color: #ff00c8;
+    color: #eee;
+}
+
+.socialin{
+    padding: 14px 15px;
+}
+.socialin a{
+    padding: 13px;
+    color: #eee;
+}
+.socialin a:hover{
+  color: #ff00c8;
+
+}
+
+@media screen and (max-width: 1052px){
+    .toggle{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        top: -400px;
+        z-index: -1;
+        margin-top: -15px;
+        right: 0;
+        left: 0;
+        width: 200px;
+        background-color: #222222;
+        display: inline-block;
+        transition: top .4s;
+        margin-left: 0;
+    }
+
+    ul.show{
+        top: 60px;
+    }
+
+    ul li{
+        top: 0;
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    ul{
+        width: 100%;
+
+    }
+
+}
+@media screen and (max-width: 400px){
+    .socialin a{
+        padding: 8px;
+
+    } 
+}
+@media screen and (max-width: 350px){
+    .socialin a{
+        padding: 4px;
+
+    } 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container a{
+    color: #eee;
+    background-color: #fc34d0;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.3);
+}
+.container a:hover{
+    color: #eee;
+    background-color: #db00ac;
+}
